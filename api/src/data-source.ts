@@ -11,13 +11,13 @@ const appDataSource = new DataSource(
         url: process.env.DB_URL,
         synchronize: true,
         entities: [path.resolve(`./infrastructure/models/*.{ts,js}`)],
-        migrations: [path.resolve('./migrations/*.{ts,js}')]
+        migrations: [path.resolve('../migrations/*.{ts,js}')]
     } : {
         type: 'better-sqlite3',
         database: 'database.sqlite',
         synchronize: true,
         entities: [path.resolve('./infrastructure/models/*.{ts,js}')],
-        migrations: [path.resolve('./migrations/*.{ts,js}')]
+        migrations: [path.resolve('../migrations/*.{ts,js}')]
     }
 )
 

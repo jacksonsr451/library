@@ -7,7 +7,7 @@
     "start": "yarn build && node dist/index.js",
     "build": "yarn tsc",
     "dev": "ts-node-dev --transpile-only src/index.ts",
-    "migrations:migrate": "typeorm-ts-node-commonjs -d ./src/data-source.ts migration:generate ./src/migrations/default",
+    "migrations:migrate": "typeorm-ts-node-commonjs -d ./src/data-source.ts migration:generate ./migrations/default",
     "migrations:run": "typeorm-ts-node-commonjs -d ./src/data-source.ts migration:run"
   },
   "devDependencies": {
