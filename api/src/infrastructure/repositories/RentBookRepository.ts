@@ -1,6 +1,6 @@
 import { DataSource, Repository } from "typeorm";
 import RentBookRepositoryInterface from "../../application/interfaces/RentBookRepositoryInterface";
-import RentBookObject from "../interfaces/RentBookObject";
+import RentBookObject from "../dto/RentBookObject";
 import RentBookModel from "../models/RentBookModel";
 
 class RentBookRepository implements RentBookRepositoryInterface {

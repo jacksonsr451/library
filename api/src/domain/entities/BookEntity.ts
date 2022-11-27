@@ -1,4 +1,4 @@
-import BookObject from '../interfaces/BookObject'
+import BookObject from '../dto/BookObject'
 
 class BookEntity {
     

@@ -1,5 +1,5 @@
 import { v4 as uuid4 } from 'uuid'
-import LibraryObject from "../interfaces/LibraryObject"
+import LibraryObject from "../dto/LibraryObject"
 
 class LibraryEntity {
 

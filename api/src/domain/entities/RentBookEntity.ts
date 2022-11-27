@@ -1,5 +1,5 @@
 import { v4 as uuid4 } from 'uuid'
-import RentBookObject from "../interfaces/RentBookObject"
+import RentBookObject from "../dto/RentBookObject"
 
 class RentBookEntity {
     

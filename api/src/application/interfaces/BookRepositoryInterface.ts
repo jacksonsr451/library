@@ -1,4 +1,4 @@
-import BookObject from "../../domain/interfaces/BookObject"
+import BookObject from "../../domain/dto/BookObject"
 
 interface BookRepositoryInterface {
     create(props: BookObject): Promise<void>

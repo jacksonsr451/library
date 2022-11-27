@@ -1,5 +1,5 @@
 import { v4 as uuid4 } from 'uuid'
-import CategoryObject from '../interfaces/CategoryObject'
+import CategoryObject from '../dto/CategoryObject'
 
 class CategoryEntity {
 
