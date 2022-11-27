@@ -4,12 +4,6 @@ import 'reflect-metadata'
 
 import { DataSource } from 'typeorm'
 
-// eslint-disable-next-line no-eval
-// const value = eval(process.env.PRODUCTION)
-
-console.log(path.resolve('./src/infrastructure/models/*.{ts,js}'))
-console.log(path.resolve('./migrations/*.{ts,js}'))
-console.log(process.env.PRODUCTION)
 
 const appDataSource = new DataSource(
     process.env.PRODUCTION === 'true' ? 

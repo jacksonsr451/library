@@ -3,13 +3,13 @@ import BookModel from "./BookModel"
 
 @Entity('rent_books')
 class RentBookModel {
-    @Column({primary: true, type: 'string'})
+    @Column({primary: true, type: 'varchar'})
     id: string 
     
-    @Column({type: 'string'})
+    @Column({type: 'varchar'})
     responsable: string
     
-    @Column({type: 'string'})
+    @Column({type: 'varchar'})
     isbn: string
 
     @OneToOne(() => BookModel, book => book.isbn)
