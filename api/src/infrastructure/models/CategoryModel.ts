@@ -3,10 +3,10 @@ import { Column, Entity } from "typeorm"
 @Entity('categories')
 class CategoryModel {
 
-    @Column({primary: true, type: 'string'})
+    @Column({primary: true, type: 'varchar'})
     id: string
     
-    @Column({type: 'string'})
+    @Column({type: 'varchar'})
     name: string
     
     @Column({type: 'text'})

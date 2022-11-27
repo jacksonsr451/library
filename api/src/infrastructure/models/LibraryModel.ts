@@ -4,17 +4,17 @@ import CategoryModel from "./CategoryModel"
 
 @Entity('libraries')
 class LibraryModel {
-    @Column({primary: true, type: 'string'})
+    @Column({primary: true, type: 'varchar'})
     id: string
     
-    @Column({type: 'string'})    
+    @Column({type: 'varchar'})    
     category_id: string
     
     @OneToMany(() => CategoryModel, category => category.id)
     @JoinColumn({name: 'category_id'})
     category: CategoryModel
 
-    @Column({type: 'string'})
+    @Column({type: 'varchar'})
     book_isbn: string
 
     @OneToOne(() => BookModel, book => book.isbn)

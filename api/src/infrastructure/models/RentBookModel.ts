@@ -16,13 +16,13 @@ class RentBookModel {
     @JoinColumn({name: 'isbn'})
     book: BookModel
     
-    @Column({type: 'string'})
+    @Column({type: 'date'})
     data: Date
     
-    @Column({type: 'string'})
+    @Column({type: 'date'})
     devolution: Date
     
-    @Column({type: 'string'})
+    @Column({type: 'varchar'})
     status: boolean
 }
 

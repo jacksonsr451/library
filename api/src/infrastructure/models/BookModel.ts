@@ -2,13 +2,13 @@ import { Column, Entity } from "typeorm"
 
 @Entity('books')
 class BookModel {
-    @Column({primary: true, type: 'string'})
+    @Column({primary: true, type: 'varchar'})
     isbn: string
     
-    @Column({type: 'string'})
+    @Column({type: 'varchar'})
     title: string
     
-    @Column({type: 'string'})
+    @Column({type: 'varchar'})
     author: string
     
     @Column({type: 'simple-array'})
