@@ -1,10 +1,10 @@
-import appDataSource from "../../data-source"
+import { DataSource } from "typeorm"
 import CategoryRepository from "../../infrastructure/repositories/CategoryRepository"
 import CategoryRepositoryInterface from "../interfaces/CategoryRepositoryInterface"
 import CategoryServices from "../usecases/CategoryServices"
 
 
-const categoryServiceFactory = () => {
+const categoryServiceFactory = (appDataSource: DataSource) => {
     const repository: CategoryRepositoryInterface = new CategoryRepository(appDataSource)
     return new CategoryServices(repository)
 }
