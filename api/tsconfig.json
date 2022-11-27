@@ -3,7 +3,9 @@
     "incremental": true,
     "target": "esnext",
     "module": "commonjs",
-    "rootDir": "./src",
+    "rootDirs": [
+      "./src", "./tests", "./migrations"
+    ],
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
