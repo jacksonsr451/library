@@ -1,6 +1,6 @@
 import { DataSource, Repository } from "typeorm";
 import BookRepositoryInterface from "../../application/interfaces/BookRepositoryInterface";
-import BookObject from "../../domain/interfaces/BookObject";
+import BookObject from "../interfaces/BookObject";
 import BookModel from "../models/BookModel";
 
 class BookRepository implements BookRepositoryInterface {
