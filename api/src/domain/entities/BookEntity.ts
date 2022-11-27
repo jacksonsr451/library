@@ -1,4 +1,3 @@
-import { v4 as uuid4 } from 'uuid'
 import BookObject from '../interfaces/BookObject'
 
 class BookEntity {
@@ -10,7 +9,7 @@ class BookEntity {
     description: string
 
     constructor(props: BookObject) {
-        this.isbn = props.isbn || uuid4()
+        this.isbn = props.isbn
         this.title = props.title
         this.author = props.author
         this.coAuthro = props.coAuthro

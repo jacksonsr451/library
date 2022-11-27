@@ -1,5 +1,5 @@
 export default interface BookObject {
-    isbn: string | null
+    isbn: string
     title: string
     author: string
     coAuthro: string[]

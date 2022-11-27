@@ -10,6 +10,7 @@
     "outDir": "./dist",
     "removeComments": true,
     "preserveValueImports": false,
+    "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
