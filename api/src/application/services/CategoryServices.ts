@@ -1,3 +1,4 @@
+import CategoryEntity from "../../domain/entities/CategoryEntity"
 import CategoryObject from "../dto/CategoryObject"
 import CategoryRepositoryInterface from "../interfaces/CategoryRepositoryInterface"
 
@@ -10,11 +11,11 @@ class CategoryServices {
     }
 
     async create(props: CategoryObject): Promise<void> {
-        await this.#repository.create(props)
+        await this.#repository.create(new CategoryEntity(props).object)
     }
 
     async update(props: CategoryObject): Promise<void> {
-        await this.#repository.update(props)
+        await this.#repository.update(new CategoryEntity(props).object)
     }
     
     async delete(id: string): Promise<void> {
