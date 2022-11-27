@@ -13,6 +13,8 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": true,
+    "strictPropertyInitialization": false,
     "strict": true,
     "skipLibCheck": true
   }
