@@ -14,7 +14,7 @@ class BookModel {
     @Column({type: 'simple-array'})
     coAuthro: string[]
     
-    @Column({type: 'string'})
+    @Column({type: 'text'})
     description: string
 }
 
