@@ -1,3 +1,4 @@
+import BookEntity from "../../domain/entities/BookEntity"
 import BookObject from "../dto/BookObject"
 import BookRepositoryInterface from "../interfaces/BookRepositoryInterface"
 
@@ -10,11 +11,11 @@ class BookService {
     }
 
     async create(props: BookObject): Promise<void> {
-        await this.#repository.create(props)        
+        await this.#repository.create(new BookEntity(props).object)        
     }
 
     async update(props: BookObject): Promise<void> {
-        await this.#repository.update(props)
+        await this.#repository.update(new BookEntity(props).object)
     }
 
     async delete(id: string): Promise<void> {
