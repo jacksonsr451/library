@@ -12,7 +12,7 @@ const rentBookRoutesFactory = (services: Config['services']) => {
     router.get('/', show(services.RentBookService))
     router.get('/:id', view(services.RentBookService))
     router.post('/', create(services.RentBookService))
-    router.put('/:id', update(services.RentBookService))
+    router.put('/', update(services.RentBookService))
     router.delete('/:id', remove(services.RentBookService))
 
     return router
