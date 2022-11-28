@@ -1,7 +1,7 @@
 import { DataSource, Repository } from "typeorm";
-import LibraryRepositoryInterface from "../../application/interfaces/LibraryRepositoryInterface";
-import LibraryObject from "../dto/LibraryObject";
-import LibraryModel from "../models/LibraryModel";
+import LibraryRepositoryInterface from "@application/interfaces/LibraryRepositoryInterface";
+import LibraryObject from "@infrastructure/dto/LibraryObject";
+import LibraryModel from "@infrastructure/models/LibraryModel";
 
 class LibraryRepository implements LibraryRepositoryInterface {
     #connection: Repository<LibraryModel>

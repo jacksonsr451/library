@@ -1,10 +1,10 @@
 import { Router } from "express"
-import type Config from "../../../config"
-import create from "./create"
-import remove from "./delete"
-import show from "./show"
-import update from "./update"
-import view from "./view"
+import type Config from "@settings/config"
+import create from "@interfaces/rest/rentBooks/create"
+import remove from "@interfaces/rest/rentBooks/delete"
+import show from "@interfaces/rest/rentBooks/show"
+import update from "@interfaces/rest/rentBooks/update"
+import view from "@interfaces/rest/rentBooks/view"
 
 const rentBookRoutesFactory = (services: Config['services']) => {
     const router = Router()

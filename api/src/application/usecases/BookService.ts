@@ -1,6 +1,6 @@
-import BookEntity from "../../domain/entities/BookEntity"
-import BookObject from "../dto/BookObject"
-import BookRepositoryInterface from "../interfaces/BookRepositoryInterface"
+import BookEntity from "@domain/entities/BookEntity"
+import BookObject from "@application/dto/BookObject"
+import BookRepositoryInterface from "@application/interfaces/BookRepositoryInterface"
 
 class BookService {
 

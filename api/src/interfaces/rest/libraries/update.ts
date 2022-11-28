@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from "express"
 import { z } from "zod"
-import LibraryService from "../../../application/usecases/LibraryService"
+import LibraryService from "@application/usecases/LibraryService"
 
 const update = (service: LibraryService) => 
     async (request: Request, response: Response, next: NextFunction) => {

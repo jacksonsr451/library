@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from "express"
 import { z } from "zod"
-import BookService from "../../../application/usecases/BookService"
+import BookService from "@application/usecases/BookService"
 
 const update = (service: BookService) => 
     async (request: Request, response: Response, next: NextFunction) => {
@@ -9,6 +9,7 @@ const update = (service: BookService) =>
             title: z.string(),
             author: z.string(),
             coAuthro: z.array(z.string()),
+            publishingCompany: z.string(),
             description: z.string(),
         })
 
@@ -17,7 +18,7 @@ const update = (service: BookService) =>
             await service.update(book)
             return response.status(201).json({sucess: "Atualizado com sucesso!"})  
         } catch (error) {
-            return response.status(400).json({error: error})
+            return response.status(400).json({error})
         }
 }
 

@@ -1,11 +1,11 @@
 import bodyParser from 'body-parser'
 import express from 'express'
-import type Config from "../../config"
-import appDataSource from "../../data-source"
-import booksRoutesFactory from './books'
-import categoryRoutesFactory from './categories'
-import libraryRoutesFactory from './libraries'
-import rentBookRoutesFactory from './rentBooks'
+import type Config from "@settings/config"
+import appDataSource from "@settings/data-source"
+import booksRoutesFactory from '@interfaces/rest/books'
+import categoryRoutesFactory from '@interfaces/rest/categories'
+import libraryRoutesFactory from '@interfaces/rest/libraries'
+import rentBookRoutesFactory from '@interfaces/rest/rentBooks'
 
 const rest = (config: Config) => {    
     appDataSource.initialize()
