@@ -1,7 +1,7 @@
 import { DataSource } from "typeorm"
-import RentBookRepository from "../../infrastructure/repositories/RentBookRepository"
-import RentBookRepositoryInterface from "../interfaces/RentBookRepositoryInterface"
-import RentBookService from "../usecases/RentBookService"
+import RentBookRepository from "@infrastructure/repositories/RentBookRepository"
+import RentBookRepositoryInterface from "@application/interfaces/RentBookRepositoryInterface"
+import RentBookService from "@application/usecases/RentBookService"
 
 
 const rentBookServiceFactory = (appDataSource: DataSource) => {
