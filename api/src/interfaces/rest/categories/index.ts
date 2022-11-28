@@ -12,7 +12,7 @@ const categoryRoutesFactory = (services: Config['services']) => {
     router.get('/', show(services.CategoryService))
     router.get('/:id', view(services.CategoryService))
     router.post('/', create(services.CategoryService))
-    router.put('/:id', update(services.CategoryService))
+    router.put('/', update(services.CategoryService))
     router.delete('/:id', remove(services.CategoryService))
 
     return router
