@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from "express"
 import { DateTime } from "luxon"
 import { z } from "zod"
-import RentBookService from "../../../application/usecases/RentBookService"
+import RentBookService from "@application/usecases/RentBookService"
 
 const update = (service: RentBookService) => 
     async (request: Request, response: Response, next: NextFunction) => {

@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from "express"
 import { z } from "zod"
-import CategoryService from "../../../application/usecases/CategoryServices"
+import CategoryService from "@application/usecases/CategoryServices"
 
 const update = (service: CategoryService) => 
     async (request: Request, response: Response, next: NextFunction) => {
@@ -15,7 +15,7 @@ const update = (service: CategoryService) =>
             await service.update(category)
             return response.status(200).json({message: "Categoria atualizada com sucesso!"})
         } catch (error) {
-            return response.status(400).json({error: error})
+            return response.status(400).json({error})
         }
 }
 

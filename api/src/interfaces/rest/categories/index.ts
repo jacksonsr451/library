@@ -1,10 +1,10 @@
 import { Router } from "express"
 import type Config from "../../../config"
-import create from "./create"
-import remove from "./delete"
-import show from "./show"
-import update from "./update"
-import view from "./view"
+import create from "@interfaces/rest/categories/create"
+import remove from "@interfaces/rest/categories/delete"
+import show from "@interfaces/rest/categories/show"
+import update from "@interfaces/rest/categories/update"
+import view from "@interfaces/rest/categories/view"
 
 const categoryRoutesFactory = (services: Config['services']) => {
     const router = Router()
