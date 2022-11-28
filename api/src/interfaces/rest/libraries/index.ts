@@ -12,7 +12,7 @@ const libraryRoutesFactory = (services: Config['services']) => {
     router.get('/', show(services.LibraryService))
     router.get('/:id', view(services.LibraryService))
     router.post('/', create(services.LibraryService))
-    router.put('/:id', update(services.LibraryService))
+    router.put('/', update(services.LibraryService))
     router.delete('/:id', remove(services.LibraryService))
 
     return router
