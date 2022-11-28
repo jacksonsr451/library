@@ -1,4 +1,5 @@
-import type BookObject from '../dto/BookObject'
+import type BookObject from '@domain/dto/BookObject'
+import isbnValidate from '@domain/validations/isbnValidate'
 
 class BookEntity {
     
@@ -10,7 +11,7 @@ class BookEntity {
     description: string
 
     constructor(props: BookObject) {
-        this.isbn = props.isbn
+        this.isbn = isbnValidate(props.isbn)
         this.title = props.title
         this.author = props.author
         this.coAuthro = props.coAuthro || [""]
