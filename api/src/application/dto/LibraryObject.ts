@@ -1,5 +1,5 @@
 export default interface LibraryObject {
-    id: string 
+    id?: string 
     category_id: string
     book_isbn: string
     amount: number
