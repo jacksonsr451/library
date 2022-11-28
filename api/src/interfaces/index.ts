@@ -1,4 +1,4 @@
-import type Config from "../config";
+import type Config from "@settings/config";
 import rest from "@interfaces/rest";
 
 const start = (config: Config) => {

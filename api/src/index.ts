@@ -1,10 +1,10 @@
-import bookServiceFactory from './application/factories/bookServicesFactory'
-import categoryServiceFactory from './application/factories/categoryServiceFactory'
-import libraryServiceFactory from './application/factories/libraryServiceFactory'
-import rentBookServiceFactory from './application/factories/rentBookServiceFactory'
-import Config from './config'
-import appDataSource from './data-source'
-import start from './interfaces'
+import bookServiceFactory from '@application/factories/bookServicesFactory'
+import categoryServiceFactory from '@application/factories/categoryServiceFactory'
+import libraryServiceFactory from '@application/factories/libraryServiceFactory'
+import rentBookServiceFactory from '@application/factories/rentBookServiceFactory'
+import Config from '@settings/config'
+import appDataSource from '@settings/data-source'
+import start from '@interfaces/index'
 
 
 (async () => {

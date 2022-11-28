@@ -1,5 +1,5 @@
 import { Router } from "express"
-import type Config from "../../../config"
+import type Config from "@settings/config"
 import create from "@interfaces/rest/rentBooks/create"
 import remove from "@interfaces/rest/rentBooks/delete"
 import show from "@interfaces/rest/rentBooks/show"

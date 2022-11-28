@@ -11,7 +11,8 @@
       "@domain/*": ["./src/domain/*"],
       "@application/*": ["./src/application/*"],
       "@interfaces/*": ["./src/interfaces/*"],
-      "@infrastructure/*": ["./src/infrastructure/*"]
+      "@infrastructure/*": ["./src/infrastructure/*"],
+      "@settings/*": ["./src/settings/*"],
     },
     "declaration": true,
     "declarationMap": true,
