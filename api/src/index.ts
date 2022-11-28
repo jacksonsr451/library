@@ -1,12 +1,22 @@
-import express from 'express'
-import AppDataSource from './data-source'
+import bookServiceFactory from './application/factories/bookServicesFactory'
+import categoryServiceFactory from './application/factories/categoryServiceFactory'
+import libraryServiceFactory from './application/factories/libraryServiceFactory'
+import rentBookServiceFactory from './application/factories/rentBookServiceFactory'
+import Config from './config'
+import appDataSource from './data-source'
+import start from './interfaces'
 
-AppDataSource.initialize()
-    .then(() => {
-        const app = express()
 
-        app.use(express.json())
+(async () => {
+    const config: Config = {
+        port: Number(process.env.PORT) || 3000,
+        services: {
+            BookService: bookServiceFactory(appDataSource),
+            CategoryService: categoryServiceFactory(appDataSource),
+            LibraryService: libraryServiceFactory(appDataSource),
+            RentBookService: rentBookServiceFactory(appDataSource)
+        }
+    }       
 
-
-        return app.listen(process.env.PORT)
-    }).catch((error) => console.log(error))
+    start(config)
+})()

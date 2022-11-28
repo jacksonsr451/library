@@ -2,7 +2,7 @@ import CategoryEntity from "../../domain/entities/CategoryEntity"
 import CategoryObject from "../dto/CategoryObject"
 import CategoryRepositoryInterface from "../interfaces/CategoryRepositoryInterface"
 
-class CategoryServices {
+class CategoryService {
 
     #repository: CategoryRepositoryInterface
 
@@ -32,4 +32,4 @@ class CategoryServices {
 
 }
 
-export default CategoryServices
+export default CategoryService
