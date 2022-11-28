@@ -1,7 +1,8 @@
-import { Request, Response } from "express"
+import { NextFunction, Request, Response } from "express"
 import BookService from "../../../application/usecases/BookService"
 
-const update = (service: BookService) => async (request: Request, response: Response) => {
+const update = (service: BookService) => 
+    async (request: Request, response: Response, next: NextFunction) => {
 
 }
 
