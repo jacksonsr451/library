@@ -12,7 +12,7 @@ const booksRoutesFactory = (services: Config['services']) => {
     router.get('/', show(services.BookService))
     router.get('/:id', view(services.BookService))
     router.post('/', create(services.BookService))
-    router.put('/:id', update(services.BookService))
+    router.put('/', update(services.BookService))
     router.delete('/:id', remove(services.BookService))
 
     return router
