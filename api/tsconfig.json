@@ -6,6 +6,13 @@
     "rootDirs": [
       "./src", "./tests", "./migrations"
     ],
+    "baseUrl": ".",
+    "paths": {
+      "@domain/*": ["./src/domain/*"],
+      "@application/*": ["./src/application/*"],
+      "@interfaces/*": ["./src/interfaces/*"],
+      "@infrastructure/*": ["./src/infrastructure/*"]
+    },
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
@@ -20,5 +27,10 @@
     "strictPropertyInitialization": false,
     "strict": true,
     "skipLibCheck": true
-  }
+  }, 
+  "include": [
+    "src/**/*",
+    "tests/**/*",
+    "migrations/**/*"
+  ]
 }
