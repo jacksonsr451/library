@@ -15,9 +15,9 @@ const rest = (config: Config) => {
         app.use(bodyParser.json())
 
         app.use('/api/v1/books', booksRoutesFactory(config.services))
-        app.use('/api/v1/category', categoryRoutesFactory(config.services))
+        app.use('/api/v1/categories', categoryRoutesFactory(config.services))
         app.use('/api/v1/library', libraryRoutesFactory(config.services))
-        app.use('/api/v1/rent-book', rentBookRoutesFactory(config.services))
+        app.use('/api/v1/rent-books', rentBookRoutesFactory(config.services))
         
         return app.listen(config.port)
     }).catch((error) => console.log(error))
