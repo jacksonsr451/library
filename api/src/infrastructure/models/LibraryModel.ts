@@ -1,6 +1,6 @@
 import { Column, Entity, JoinColumn, OneToMany, OneToOne } from "typeorm"
-import BookModel from "./BookModel"
-import CategoryModel from "./CategoryModel"
+import BookModel from "@infrastructure/models/BookModel"
+import CategoryModel from "@infrastructure/models/CategoryModel"
 
 @Entity('libraries')
 class LibraryModel {

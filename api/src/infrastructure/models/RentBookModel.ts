@@ -1,5 +1,5 @@
 import { Column, Entity, JoinColumn, OneToOne } from "typeorm"
-import BookModel from "./BookModel"
+import BookModel from "@infrastructure/models//BookModel"
 
 @Entity('rent_books')
 class RentBookModel {

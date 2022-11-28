@@ -1,7 +1,7 @@
 import { DataSource, Repository } from "typeorm";
-import CategoryRepositoryInterface from "../../application/interfaces/CategoryRepositoryInterface";
-import CategoryObject from "../dto/CategoryObject";
-import CategoryModel from "../models/CategoryModel";
+import CategoryRepositoryInterface from "@application/interfaces/CategoryRepositoryInterface";
+import CategoryObject from "@infrastructure/dto/CategoryObject";
+import CategoryModel from "@infrastructure/models/CategoryModel";
 
 class CategoryRepository implements CategoryRepositoryInterface {
     #connection: Repository<CategoryModel>
