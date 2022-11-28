@@ -9,10 +9,10 @@ const Router: React.FC = () => {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/admin/books" element={<Books />}/>
-                <Route path="/admin/categories" element={<Categories />}/>
-                <Route path="/admin/libraries" element={<Libraries />}/>
-                <Route path="/admin/rent-books" element={<RentBooks />}/>
+                <Route path="/books" element={<Books />}/>
+                <Route path="/categories" element={<Categories />}/>
+                <Route path="/libraries" element={<Libraries />}/>
+                <Route path="/rent-books" element={<RentBooks />}/>
             </Routes>
         </BrowserRouter>
     )
