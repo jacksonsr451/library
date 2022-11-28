@@ -15,12 +15,12 @@ class RentBookEntity {
         this.responsable = props.responsable
         this.isbn = props.isbn
         this.data = props.data
-        this.devolution = props.devolution || this.#getRentDate(this.data)
+        this.devolution = props.devolution || this.#getRentDate()
         this.status = props.status || false
     }
 
-    #getRentDate(date: Date): Date {
-        const newDate = date
+    #getRentDate(): Date {
+        const newDate = new Date()
         newDate.setDate(newDate.getDate() + 7)
         return newDate
     }
