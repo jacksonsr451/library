@@ -1,8 +1,8 @@
 export default interface RentBookObject {
-    id: string 
+    id?: string 
     responsable: string
     isbn: string
     data: Date
-    devolution: Date
-    status: boolean
+    devolution?: Date
+    status?: boolean
 }

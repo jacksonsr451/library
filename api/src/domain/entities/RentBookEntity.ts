@@ -15,7 +15,7 @@ class RentBookEntity {
         this.responsable = props.responsable
         this.isbn = props.isbn
         this.data = props.data
-        this.devolution = props.devolution
+        this.devolution = props.devolution || new Date(this.data.getDate() + 7)
         this.status = props.status || false
     }
 
