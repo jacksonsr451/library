@@ -5,7 +5,7 @@ const DefaultContentStyled = styled.div`
     display: flex;
 
     .aside {
-        width: 250px;
+        width: 320px;
         margin: .8rem;
         border-radius: .8rem;
         background-color: ${({theme}) => theme.colors.border};
