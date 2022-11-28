@@ -1,4 +1,4 @@
-import RentBookObject from "../../domain/dto/RentBookObject"
+import RentBookObject from "@domain/dto/RentBookObject"
 
 interface RentBookRepositoryInterface {
     create(props: RentBookObject): Promise<void>

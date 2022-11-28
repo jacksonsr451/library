@@ -1,4 +1,4 @@
-import LibraryObject from "../../domain/dto/LibraryObject"
+import LibraryObject from "@domain/dto/LibraryObject"
 
 interface LibraryRepositoryInterface {
     create(props: LibraryObject): Promise<void>

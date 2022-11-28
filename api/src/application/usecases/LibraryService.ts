@@ -1,6 +1,6 @@
-import LibraryEntity from "../../domain/entities/LibraryEntity"
-import LibraryObject from "../dto/LibraryObject"
-import LibraryRepositoryInterface from "../interfaces/LibraryRepositoryInterface"
+import LibraryEntity from "@domain/entities/LibraryEntity"
+import LibraryObject from "@application/dto/LibraryObject"
+import LibraryRepositoryInterface from "@application/interfaces/LibraryRepositoryInterface"
 
 class LibraryService {
 

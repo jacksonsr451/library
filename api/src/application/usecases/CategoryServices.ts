@@ -1,5 +1,5 @@
-import CategoryEntity from "../../domain/entities/CategoryEntity"
-import CategoryObject from "../dto/CategoryObject"
+import CategoryEntity from "@domain/entities/CategoryEntity"
+import CategoryObject from "@application/dto/CategoryObject"
 import CategoryRepositoryInterface from "../interfaces/CategoryRepositoryInterface"
 
 class CategoryService {

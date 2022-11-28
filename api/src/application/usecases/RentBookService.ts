@@ -1,6 +1,6 @@
-import RentBookEntity from "../../domain/entities/RentBookEntity"
-import RentBookObject from "../dto/RentBookObject"
-import RentBookRepositoryInterface from "../interfaces/RentBookRepositoryInterface"
+import RentBookEntity from "@domain/entities/RentBookEntity"
+import RentBookObject from "@application/dto/RentBookObject"
+import RentBookRepositoryInterface from "@application/interfaces/RentBookRepositoryInterface"
 
 class RentBookService {
 

@@ -1,4 +1,4 @@
-import CategoryObject from "../../domain/dto/CategoryObject"
+import CategoryObject from "@domain/dto/CategoryObject"
 
 interface CategoryRepositoryInterface {
     create(props: CategoryObject): Promise<void>
