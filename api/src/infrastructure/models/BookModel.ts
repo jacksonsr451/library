@@ -13,6 +13,9 @@ class BookModel {
     
     @Column({type: 'simple-array'})
     coAuthro: string[]
+
+    @Column({type: 'varchar'})
+    publishingCompany: string
     
     @Column({type: 'text'})
     description: string
