@@ -1,11 +1,12 @@
 import styled from 'styled-components'
 
 const DefaultContentStyled = styled.div`
-        flex: 1;
+    flex: 1;
     display: flex;
 
     .aside {
         width: 320px;
+        height: fit-content;
         margin: .8rem;
         border-radius: .8rem;
         background-color: ${({theme}) => theme.colors.border};
