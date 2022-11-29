@@ -5,7 +5,7 @@ const Libraries: React.FC = () => {
     return (
         <LibrariesStyled>
             <div className="aside">
-                <h1>ARQUIVOS</h1>
+                <h1>REGISTROS</h1>
                 <div className="itens"><b>ADCIONAR</b></div>
             </div>
             <div className="content">
