@@ -1,8 +1,11 @@
-import React from "react"
+import React, { useState } from "react"
 import Search from "../components/Search"
 import LibrariesStyled from "../ui/LibrariesStyled"
 
 const Libraries: React.FC = () => {
+
+    const [filterValues, setFilterValues] = useState<string>("")
+
     return (
         <LibrariesStyled>
             <div className="aside">
@@ -10,7 +13,9 @@ const Libraries: React.FC = () => {
                 <div className="itens"><b>ADCIONAR</b></div>
             </div>
             <div className="content">
-                <Search /> 
+                <Search 
+                    filterValues={filterValues} 
+                    setFilterValues={setFilterValues}/>
             </div>
         </LibrariesStyled>
     )

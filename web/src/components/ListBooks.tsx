@@ -5,6 +5,7 @@ import ListBooksStyled from "../ui/ListBooksStyled"
 type ListBooksProps = {
     visible: boolean
     setVisible: Dispatch<SetStateAction<boolean>>
+    filterValues: string
     books: BooksType[]
 }
 
@@ -23,7 +24,18 @@ const ListBooks: React.FC<ListBooksProps> = (props) => {
                 </thead>
                 <tbody>
                     {
-                        props.books.map(book => {
+                        props.books.filter((book) => {
+                            return book.title.toLowerCase()
+                                .includes(props.filterValues.toLowerCase()) ||
+                                book.isbn.toLowerCase()
+                                    .includes(props.filterValues.toLowerCase()) ||
+                                book.author.toLowerCase()
+                                    .includes(props.filterValues.toLowerCase()) ||
+                                book.publishingCompany.toLowerCase()
+                                    .includes(props.filterValues.toLowerCase()) ||
+                                book.description.toLowerCase()
+                                    .includes(props.filterValues.toLowerCase())
+                        }).map(book => {
                             return (
                                 <tr>
                                     <td className="isbn">{book.isbn}</td>

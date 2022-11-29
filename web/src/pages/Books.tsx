@@ -5,12 +5,14 @@ import BooksType from "../types/BooksTypes"
 import BooksStyled from "../ui/BooksStyled"
 
 const Books: React.FC = () => {
-    const [listBooks, setListBooks] = useState<BooksType[]>([
+    const listBooks: BooksType[] = [
         {isbn: '978-85-508-0480-6', title: 'Arquitetura Limpa', author: 'Robert C. Martin', coAuthro: [''], publishingCompany: 'Alta Books', description: 'Arquitetura limpa é uma leitura essencial para profissionais que já atuam ou querem ingressar no mercado.'},
         {isbn: '978-85-508-0065-3', title: 'Domain-Driven DESIGN', author: 'Eric Evans', coAuthro: [''], publishingCompany: 'Alta Books', description: 'Este livro pertence às prateleiras de todos os desenvolvedores sérios de software.'},
         {isbn: '978-85-7522-724-4', title: 'Refatoração', author: 'Martin Fowler', coAuthro: ['Kent Beck'], publishingCompany: 'Novatec', description: 'Qualquer tolo escreve um código que um computador possa entender. Bons programadores escrevem códigos que os seres humanos podem entender.'},
-    ])
+    ]
+
     const [listVisible, setListVisible] = useState<boolean>(true)
+    const [filterValues, setFilterValues] = useState<string>("")
 
     return (
         <BooksStyled>
@@ -19,10 +21,13 @@ const Books: React.FC = () => {
                 <div className="itens"><b>ADCIONAR</b></div>
             </div>
             <div className="content">
-                <Search />
+                <Search 
+                    filterValues={filterValues} 
+                    setFilterValues={setFilterValues}/>
                 <ListBooks 
                     visible={listVisible} 
-                    setVisible={setListVisible} 
+                    setVisible={setListVisible}
+                    filterValues={filterValues}
                     books={listBooks} />
             </div>
         </BooksStyled>

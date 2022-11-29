@@ -1,13 +1,21 @@
-import React from "react";
+import React, { Dispatch, SetStateAction } from "react";
 import SearchStyled from "../ui/SearchStyled";
 
-const Search: React.FC = () => {
+type SearchProps = {
+    filterValues:string
+    setFilterValues: Dispatch<SetStateAction<string>>
+}
+
+const Search: React.FC<SearchProps> = (props) => {
     return (
         <SearchStyled>
             <div className="icon">
                 🔎
             </div>
-            <input type="text" />
+            <input 
+                type="text" 
+                onChange={(event) => props.setFilterValues(event.target.value)} 
+                value={props.filterValues} />
         </SearchStyled>
     )
 }

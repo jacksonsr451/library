@@ -1,8 +1,11 @@
-import React from "react"
+import React, { useState } from "react"
 import Search from "../components/Search"
 import CategoriesStyled from "../ui/CategoriesStyled"
 
 const Categories: React.FC = () => {
+
+    const [filterValues, setFilterValues] = useState<string>("")
+    
     return (
         <CategoriesStyled>
             <div className="aside">
@@ -10,7 +13,9 @@ const Categories: React.FC = () => {
                 <div className="itens"><b>ADCIONAR</b></div>
             </div>
             <div className="content">
-                <Search />
+                <Search 
+                    filterValues={filterValues} 
+                    setFilterValues={setFilterValues}/>
             </div>
         </CategoriesStyled>
     )
