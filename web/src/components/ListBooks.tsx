@@ -6,10 +6,17 @@ type ListBooksProps = {
     visible: boolean
     setVisible: Dispatch<SetStateAction<boolean>>
     filterValues: string
+    setBook: Dispatch<SetStateAction<BooksType>>
     books: BooksType[]
 }
 
 const ListBooks: React.FC<ListBooksProps> = (props) => {
+
+    const handleBook = (book: BooksType) => () => {
+        props.setBook(book)
+        props.setVisible(! props.visible)
+    }
+
     return (
         <ListBooksStyled visible={props.visible}>
             <table>
@@ -37,7 +44,7 @@ const ListBooks: React.FC<ListBooksProps> = (props) => {
                                     .includes(props.filterValues.toLowerCase())
                         }).map(book => {
                             return (
-                                <tr>
+                                <tr onClick={handleBook(book)}>
                                     <td className="isbn">{book.isbn}</td>
                                     <td className="title">{book.title}</td>
                                     <td className="author">{book.author}</td>
