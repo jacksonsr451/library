@@ -7,7 +7,7 @@ type ListBooksProps = {
     setVisible: Dispatch<SetStateAction<boolean>>
     filterValues: string
     setBook: Dispatch<SetStateAction<BooksType>>
-    books: BooksType[]
+    books: BooksType[] | null | undefined
 }
 
 const ListBooks: React.FC<ListBooksProps> = (props) => {
@@ -31,7 +31,7 @@ const ListBooks: React.FC<ListBooksProps> = (props) => {
                 </thead>
                 <tbody>
                     {
-                        props.books.filter((book) => {
+                        props.books?.filter((book) => {
                             return book.title.toLowerCase()
                                 .includes(props.filterValues.toLowerCase()) ||
                                 book.isbn.toLowerCase()
@@ -52,7 +52,7 @@ const ListBooks: React.FC<ListBooksProps> = (props) => {
                                     <td className="descriotion">{book.description}</td>
                                 </tr>
                             )
-                        })
+                        }) 
                     }
                 </tbody>
             </table>
