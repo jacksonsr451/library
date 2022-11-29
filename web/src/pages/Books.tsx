@@ -1,4 +1,5 @@
 import React from "react"
+import Search from "../components/Search"
 import BooksStyled from "../ui/BooksStyled"
 
 const Books: React.FC = () => {
@@ -9,12 +10,7 @@ const Books: React.FC = () => {
                 <div className="itens"><b>ADCIONAR</b></div>
             </div>
             <div className="content">
-                <div className="search">
-                    <div className="icon">
-                        🔎
-                    </div>
-                    <input type="text" />
-                </div>
+                <Search />
             </div>
         </BooksStyled>
     )
