@@ -9,7 +9,12 @@ const Books: React.FC = () => {
                 <div className="itens"><b>ADCIONAR</b></div>
             </div>
             <div className="content">
-
+                <div className="search">
+                    <div className="icon">
+                        🔎
+                    </div>
+                    <input type="text" />
+                </div>
             </div>
         </BooksStyled>
     )
