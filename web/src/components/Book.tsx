@@ -1,4 +1,6 @@
-import React, { ChangeEvent, Dispatch, SetStateAction } from "react"
+import React, { ChangeEvent, Dispatch, SetStateAction, useEffect } from "react"
+import { useMutation, useQueryClient } from 'react-query';
+import api from "../services/api";
 import BooksType from "../types/BooksTypes"
 import BookStyled from "../ui/BookStyled"
 
@@ -10,6 +12,7 @@ type BookProps = {
 }
 
 const Book: React.FC<BookProps> = (props) => {
+    const queryClient = useQueryClient()
 
     const handleCancel = () => {
         props.setBook({isbn: '', title: '', author: '', coAuthor: [''], publishingCompany: '', description: ''})
@@ -22,6 +25,13 @@ const Book: React.FC<BookProps> = (props) => {
             [event.target.name]: event.target.value
         })
     }
+
+    const { mutate, isLoading, isError } = useMutation( 
+        async (book: BooksType) => await api.post('books', book), {
+        onSuccess: (success) => {
+            console.log(success)
+        }
+    })
 
     return (
         <BookStyled visible={props.visible}>
@@ -81,7 +91,7 @@ const Book: React.FC<BookProps> = (props) => {
             </div>
 
             <div className="buttons">
-                <button type="button">SALVAR</button>
+                <button type="button" onClick={() => mutate(props.book)}>SALVAR</button>
                 <button type="button" onClick={handleCancel}>CANCELAR</button>
             </div>
         </BookStyled>

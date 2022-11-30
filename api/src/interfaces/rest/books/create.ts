@@ -8,7 +8,8 @@ const create = (service: BookService) =>
             isbn: z.string(),
             title: z.string(),
             author: z.string(),
-            coAuthro: z.array(z.string()),
+            coAuthor: z.string()
+                .transform(value => value.split(',')),
             publishingCompany: z.string(),
             description: z.string(),
         })
@@ -16,7 +17,7 @@ const create = (service: BookService) =>
             const book = await schema.parseAsync(request.body)
             await service.create(book)
             return response.status(201).json({sucess: "Inserido com sucesso!"})
-        } catch (error) {
+        } catch (error: any | unknown) {
             return response.status(400).json({error})
         }
 }

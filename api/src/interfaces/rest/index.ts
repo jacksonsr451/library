@@ -1,5 +1,6 @@
 import bodyParser from 'body-parser'
 import express from 'express'
+import cors from 'cors'
 import type Config from "@settings/config"
 import appDataSource from "@settings/data-source"
 import booksRoutesFactory from '@interfaces/rest/books'
@@ -11,6 +12,8 @@ const rest = (config: Config) => {
     appDataSource.initialize()
     .then(() => {
         const app = express()
+        
+        app.use(cors())
 
         app.use(bodyParser.json())
 

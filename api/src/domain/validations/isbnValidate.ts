@@ -56,10 +56,11 @@ const isbnValidate = (isbn: string) => {
         const message: string = 'ISBN não é valido!'
         let result: number = 0
         for (let index = 0; index < 9; index++) {
-            result += parseFloat(codeString[index]) * (10 - index)
+            result += parseInt(codeString[index]) * (10 - index)
         }
         if (codeString[9].toLowerCase() === "x") result += 10
-        else result += parseFloat(codeString[9])
+        else result += parseInt(codeString[9])
+        console.log(result % 11 !== 0)
         if (result % 11 !== 0) throw new IsbnException(message)
     }
 
