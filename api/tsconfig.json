@@ -1,37 +1,32 @@
 {
   "compilerOptions": {
+    "target": "ESNext",
+    "module": "NodeNext",
+    "lib": ["ESNext"],
     "incremental": true,
-    "target": "esnext",
-    "module": "commonjs",
-    "rootDirs": [
-      "./src", "./tests", "./migrations"
-    ],
     "baseUrl": ".",
     "paths": {
       "@domain/*": ["./src/domain/*"],
       "@application/*": ["./src/application/*"],
       "@interfaces/*": ["./src/interfaces/*"],
       "@infrastructure/*": ["./src/infrastructure/*"],
-      "@settings/*": ["./src/settings/*"],
+      "@settings/*": ["./src/settings/*"]
     },
-    "declaration": true,
-    "declarationMap": true,
-    "sourceMap": true,
     "outDir": "./dist",
     "removeComments": true,
-    "preserveValueImports": false,
     "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "noImplicitAny": true,
-    "strictPropertyInitialization": false,
-    "strict": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+    "typeRoots": [
+      "@types",
+      "./node_modules/@types"
+    ]
   }, 
   "include": [
-    "src/**/*",
-    "tests/**/*",
-    "migrations/**/*"
-  ]
+    "src"
+  ],
+  "exclude": ["node_modules", "dist"]
 }

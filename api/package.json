@@ -1,12 +1,11 @@
 {
   "name": "api",
   "version": "1.0.0",
-  "main": "index.js",
   "license": "MIT",
   "scripts": {
     "test": "jest --no-cache",
-    "start": "yarn build && node dist/index.js",
-    "build": "yarn tsc",
+    "start": "node dist/src/index.js",
+    "build": "tsc",
     "dev": "ts-node-dev -r tsconfig-paths/register --transpile-only src/index.ts",
     "migrations:migrate": "typeorm-ts-node-commonjs -d ./src/data-source.ts migration:generate ./migrations/default",
     "migrations:run": "typeorm-ts-node-commonjs -d ./src/data-source.ts migration:run"

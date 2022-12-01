@@ -2,10 +2,12 @@ const { compilerOptions } = require('./tsconfig.json')
 const { pathsToModuleNameMapper } = require('ts-jest')
 
 module.exports = {
-    roots: ['./tests'],
-    testEnvironment: 'node',
-    transform: {
-        '.+\\.ts$': 'ts-jest'
-    },
-    moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, { prefix: '<rootDir>' })
-}
+    clearMocks: true,
+
+    coverageProvider: "v8",
+
+    moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {prefix: '<rootDir>'}),
+
+    preset: 'ts-jest',
+
+};
